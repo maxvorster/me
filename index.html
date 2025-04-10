@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Type curl https://maxvorster.github.com/me/ into CMD!</h1>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Page</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var userAgent = navigator.userAgent.toLowerCase();
+
+            // Check if the request is from a browser or curl
+            if (userAgent.includes('curl')) {
+                // Content for curl request
+                document.body.innerHTML = "<h1>Never gonna give you up, never gonna let you down</h1><p>Never gonna run around and desert you</p><p>Never gonna make you cry, never gonna say goodbye</p><p>Never gonna tell a lie and hurt you</p>";
+            } else {
+                // Content for regular browser request
+                document.body.innerHTML = "<h1>Type curl https://[username].github.com/rickroll/ into CMD!</h1>";
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Content will be replaced by JavaScript -->
+</body>
 </html>
